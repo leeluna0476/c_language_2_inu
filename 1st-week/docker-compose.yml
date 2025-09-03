@@ -4,9 +4,8 @@ services:
     build: ./
     container_name: ctest-amd64
     volumes:
-      - ./srcs:/srcs
+      - ./srcs:/root/srcs
     platform: linux/amd64
-    working_dir: /srcs
     stdin_open: true
     tty: true
     entrypoint: /bin/sh
