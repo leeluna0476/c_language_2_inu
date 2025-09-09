@@ -2,6 +2,6 @@ FROM alpine:latest
 
 RUN apk --update add vim build-base
 
-WORKDIR /root/srcs
+WORKDIR /srcs
 
 CMD [ "/bin/sh" ]
