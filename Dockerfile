@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk --update add vim build-base
+RUN apk --update add vim build-base nasm
 
 WORKDIR /srcs
 
