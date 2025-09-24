@@ -1,18 +1,25 @@
+//1. 특별한 배열, 문자열.
+//2. Char a[] = “”, {, ,} 저장 방식 차이
+//3. 이차원 배열 — 계층별 덩어리로 나눠보기.
+//4. 삼차원 배열 — 계층별 덩어리로 나눠보기.
+//5. 배열 초기화…
 #include <stdio.h>
 
 int	main(void) {
 	char	a[14] = "i am seojilee"; // 13글자. 보이지 않는 NULL(ascii 0) 문자가 들어갈 공간까지 필요함.
+									 // a[13] = ".." -> 널문자까지 같이 써버려서 위험할 수 있음.
 	char	b[] = "i am seojilee"; // OK
 	// QUIZ: a를 한 글자씩 풀어서 써보기.
 	// 주의: a와 완전히 동일하게 만들어야 함.
+
 	// a, b, c, d는 서로 같을까?
 	char	c[13] = { 'i', ' ', 'a', 'm', ' ', 's', 'e', 'o', 'j', 'i', 'l', 'e', 'e' };
-	char	d[] = { 'i', ' ', 'a', 'm', ' ', 's', 'e', 'o', 'j', 'i', 'l', 'e', 'e', 0x00 };
+	char	d[] = { 'i', ' ', 'a', 'm', ' ', 's', 'e', 'o', 'j', 'i', 'l', 'e', 'e', '\0' };
 
 	printf("c value: %s\n", c); // 무엇이 출력될까? i am seojilee? or what?
-	printf("c[13] value: %c\n", c[13]);
-	printf("c[13] address: %p\n", &c[13]);
-	printf("a address: %p\n", a);
+//	printf("c[13] value: %c\n", c[13]);
+//	printf("c[13] address: %p\n", &c[13]);
+//	printf("a address: %p\n", a);
 
 	// c가 가장 낮은 주소. 크기가 지 혼자 다르다.
 	// 주소 크기 오름차순: c, a, b, d
