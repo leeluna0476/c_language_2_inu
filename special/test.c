@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-// legal ops: ! ~ & ^ | + << >>
-// max op: 10
 int	pad_upper_bits(int n) {
 	int x = (~0x00) + (!n); // 3
 	x = x << (0x20 + (~n + 1)); // 7
@@ -20,6 +18,5 @@ int	main(void) {
 		print_bin(pad_upper_bits(i));
 	}
 
-//	print_bin(0xffffffff + 1);
 	return 0;
 }
