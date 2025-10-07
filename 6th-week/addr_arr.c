@@ -2,7 +2,8 @@
 #include <stdint.h>
 
 int main() {
-	int	i[3][4] = { 100, 200, 300, 400, 500, };
+//	int	i[3][4] = { 100, 200, 300, 400, 500, };
+	int	i[2][3][4] = { 100, 200, 300, 400, 500, };
 	intptr_t pi = (intptr_t)i;
 
 	printf("i = %ld\n", (intptr_t)i - pi);
@@ -33,5 +34,6 @@ int main() {
 	printf("&i[0][0] + 1 = %ld\n", (intptr_t)(&i[0][0] + 1) - pi);
 	printf("&i[1][0] + 1 = %ld\n", (intptr_t)(&i[1][0] + 1) - pi);
 
-	printf("i[0][0] = %d\n", i[0][0]);
+//	printf("i[0][0] = %d\n", i[0][0]);
+	printf("i[0][0][0] = %d\n", i[0][0][0]);
 }
